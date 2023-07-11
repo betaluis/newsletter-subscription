@@ -45,7 +45,7 @@ export default function Form({ email, setEmail }: Props) {
         }
 
         emailjs.send("service_8hcyfq9", "template_7yio7ym", { to_email: email }, "pGAlzR1yvpcNbzAsq")
-            .then(res => {
+            .then(() => {
                 navigate("/thankyou")
             }, (err) => {
                 console.log(err)

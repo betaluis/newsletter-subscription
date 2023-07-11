@@ -13,13 +13,12 @@ const FeaturedImage = () => {
             <img
                 src={MobileImage}
                 className="md:hidden sm:rounded-2xl"
+                alt="Sign Up Illustration"
             />
             <img
                 src={DesktopImage}
-                className="
-                    hidden h-[523px]
-                    md:block
-                "
+                className="hidden h-[523px] md:block"
+                alt="Sign Up Illustration"
             />
         </>
     )
@@ -29,7 +28,8 @@ const FeaturedImage = () => {
 const SignUp = ({ email, setEmail }: Props) => {
     return (
         <div 
-            className="bg-white max-w-[370px]
+            className="
+                bg-white max-w-[370px]
                 xs:rounded-xl xs:overflow-hidden sm:p-4
                 md:max-w-[800px] md:w-full md:flex md:flex-row-reverse
                 md:justify-between md:m-auto md:p-4 md:rounded-3xl

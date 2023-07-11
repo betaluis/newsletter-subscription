@@ -11,10 +11,7 @@ function App() {
     const [ email, setEmail ] = useState("");
 
     return (
-        <div className="flex flex-col bg-slate-800 min-h-screen 
-                xs:p-4 xs:justify-center xs:items-center
-            "
-        >
+        <div className="flex flex-col bg-slate-800 min-h-screen xs:p-4 xs:justify-center xs:items-center" >
             <Router>
                 <Routes>
                     <Route path="/" element={<SignUp email={email} setEmail={setEmail} />} />

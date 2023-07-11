@@ -10,7 +10,7 @@ const Button = ({ text, type = undefined, onClick }: Props) => {
             type={type}
             onClick={onClick}
             className="
-                bg-slate-800 text-slate-50 py-3 w-full 
+                block bg-slate-800 text-slate-50 py-3 w-full 
                 transition-all duration-200
                 xs:mt-4
                 rounded-md font-bold md:text-sm

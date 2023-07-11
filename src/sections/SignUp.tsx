@@ -12,7 +12,7 @@ const FeaturedImage = () => {
         <>
             <img
                 src={MobileImage}
-                className="md:hidden sm:rounded-2xl"
+                className="md:hidden sm:rounded-2xl w-full"
                 alt="Sign Up Illustration"
             />
             <img
@@ -29,8 +29,9 @@ const SignUp = ({ email, setEmail }: Props) => {
     return (
         <div 
             className="
-                bg-white max-w-[370px]
-                xs:rounded-xl xs:overflow-hidden sm:p-4
+                bg-white w-screen max-w-[450px] min-h-screen
+                xs:overflow-hidden 
+                xs:rounded-2xl xs:min-h-full
                 md:max-w-[800px] md:w-full md:flex md:flex-row-reverse
                 md:justify-between md:m-auto md:p-4 md:rounded-3xl
             "

@@ -16,7 +16,7 @@ export default function Form({ email, setEmail }: Props) {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const errorStyles = "outline-none bg-red-100 text-red-500 ring-1 ring-inset ring-red-500 focus:text-red-500 focus:ring-1 focus:bg-red-100 focus:ring-red-500 placeholder:text-red-300";
+    const errorStyles = "outline-none bg-red-100 text-red-500 ring-1 ring-inset ring-red-500 focus:text-red-500 focus:ring-2 focus:bg-red-100 focus:ring-red-500 placeholder:text-red-300";
 
     const validateEmail = (email: string) => {
       return emailRegex.test(email);
@@ -61,8 +61,8 @@ export default function Form({ email, setEmail }: Props) {
                     <span 
                         className={`
                             block text-sm font-bold text-red-500 md:text-xs
-                            opacity-0 transition-all translate-y-4
-                            ${error ? "opacity-100 -translate-y-0" : ""}
+                            hide
+                            ${error ? "appear" : ""}
                         `}
                     >
                         {error}
@@ -77,14 +77,14 @@ export default function Form({ email, setEmail }: Props) {
                         className={`
                             w-full py-3 px-3 rounded-md 
                             placeholder:text-gray-400 
-                            focus:ring-inset focus:ring-2 focus:outline-none focus:ring-slate-800
+                            focus:ring-inset focus:ring-2 focus:outline-none
                             md:text-sm
-                            ${error ? errorStyles : "ring-1 ring-inset ring-gray-300" }
+                            ${error ? errorStyles : "ring-1 ring-inset ring-gray-300 focus:ring-slate-800" }
                         `}
                     />
                 </div>
             </label>
-            <div className="">
+            <div className="mt-4 md:mt-0">
                 <Button text="Subscribe to monthly newsletter" type="submit" />
             </div>
         </form>

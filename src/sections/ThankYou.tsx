@@ -29,7 +29,9 @@ const ThankYou = ({ email, setEmail }: Props) => {
             </div>
             <h1 className="text-4xl font-bold text-slate-800 pt-8 leading-[2.5rem] xs:pt-8">Thanks for subscribing!</h1>
             <p className="pt-8 text-zinc-700 xs:pt-4 xs:text-sm">A confirmation email has been sent to <strong className="text-slate-800">{email}</strong>. Please open it and click the button inside to confirm your subscription.</p>
-            <Button text="Dismiss message" onClick={handleDismiss} />
+            <div className="mt-auto w-full xs:mt-0">
+                <Button text="Dismiss message" onClick={handleDismiss} />
+            </div>
         </div>
     )
 }

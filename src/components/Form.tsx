@@ -60,9 +60,9 @@ export default function Form({ email, setEmail }: Props) {
                     <span className="block text-sm font-bold text-slate-800 md:text-xs">Email address</span>
                     <span 
                         className={`
-                            text-sm font-bold text-red-500 md:text-xs
-                            opacity-0 translate-y-4 transition
-                            ${error ? "translate-y-0 opacity-100" : ""}
+                            block text-sm font-bold text-red-500 md:text-xs
+                            opacity-0 transition-all translate-y-4
+                            ${error ? "opacity-100 -translate-y-0" : ""}
                         `}
                     >
                         {error}
@@ -70,7 +70,6 @@ export default function Form({ email, setEmail }: Props) {
                 </div>
                 <div className="mt-2">
                     <input 
-                        required
                         value={email}
                         onChange={handleChange}
                         onKeyDown={handleKeydown}
@@ -85,7 +84,7 @@ export default function Form({ email, setEmail }: Props) {
                     />
                 </div>
             </label>
-            <div className="mt-4 md:mt-0">
+            <div className="">
                 <Button text="Subscribe to monthly newsletter" type="submit" />
             </div>
         </form>

@@ -76,10 +76,10 @@ export default function Form({ email, setEmail }: Props) {
                         placeholder="email@company.com"
                         className={`
                             w-full py-3 px-3 rounded-md 
-                            placeholder:text-gray-400 
+                            placeholder:text-gray-400 ring-1
                             focus:ring-inset focus:ring-2 focus:outline-none
                             md:text-sm
-                            ${error ? errorStyles : "ring-1 ring-inset ring-gray-300 focus:ring-slate-800" }
+                            ${error ? errorStyles : "ring-inset ring-gray-300 focus:ring-slate-800" }
                         `}
                     />
                 </div>
